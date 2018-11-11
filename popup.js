@@ -13,8 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
           if(media != 0){
             const type = media[0];
             document.getElementById('results').innerHTML = `one ${type} found`;
-            document.getElementById('download-link').href = media[1];
             document.getElementById('download-link').innerHTML = 'download';
+            document.getElementById('download-link').addEventListener('click', function() {
+              downloadResource(media[1]);
+            }, false);
           }
           else{
             document.getElementById('results').innerHTML = 'no media found';
@@ -40,4 +42,31 @@ function getMedia(metaTags){
     }
   }
   return 0;
+}
+
+// cross origin download workaround solution from:
+// https://stackoverflow.com/questions/49474775/chrome-65-blocks-cross-origin-a-download-client-side-workaround-to-force-down
+
+function forceDownload(blob, filename) {
+  var a = document.createElement('a');
+  a.download = filename;
+  a.href = blob;
+  a.click();
+}
+
+// Current blob size limit is around 500MB for browsers
+function downloadResource(url, filename) {
+  if (!filename) filename = url.split('\\').pop().split('/').pop();
+  fetch(url, {
+    headers: new Headers({
+      'Origin': location.origin
+    }),
+    mode: 'cors'
+  })
+      .then(response => response.blob())
+      .then(blob => {
+        let blobUrl = window.URL.createObjectURL(blob);
+        forceDownload(blobUrl, filename);
+      })
+      .catch(e => console.error(e));
 }
