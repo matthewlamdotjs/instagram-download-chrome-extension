@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Instagram Media Downloader",
-  "description": "Download Instagram Videos and Images",
-  "version": "1.1",
+  "name": "IG Downloader",
+  "description": "Downloads videos and images from ig",
+  "version": "1.0",
   "author": "Matthew Lam",
   "browser_action": {
     "default_icon": "icon.png",
