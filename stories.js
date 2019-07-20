@@ -38,7 +38,7 @@ function downloadStories(){
             downloadResource(story.src ,fileNameStem + 0 + '.mp4');
         
             let currentTimeout = setInterval(function() {
-                if(story != document.getElementsByTagName('source')[0]){
+                if(document.getElementsByTagName('source')[0] && story != document.getElementsByTagName('source')[0]){
                     story = document.getElementsByTagName('source')[0];
                     downloadResource(story.src, fileNameStem + currentFileIndex + '.mp4');
                     currentFileIndex++;

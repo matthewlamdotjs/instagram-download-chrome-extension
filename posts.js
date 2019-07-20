@@ -75,6 +75,7 @@ function downloadPosts(){
                 videos = [];
                 images = [];
             }
+            clearInterval(attempts);
         }
         if(loopindex >= MAX_LOOPS) clearInterval(attempts);
         loopindex++
