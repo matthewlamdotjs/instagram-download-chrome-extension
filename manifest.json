@@ -9,10 +9,20 @@
     "default_popup": "popup.html"
   },
   "permissions": [ "activeTab" ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "matches": ["https://*.instagram.com/*"],
-      "js": ["stories.js"]
+      "js": ["posts.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["stories.js"],
+      "run_at": "document_end"
     }
   ]
 }
