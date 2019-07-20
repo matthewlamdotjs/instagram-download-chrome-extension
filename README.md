@@ -9,8 +9,8 @@ to run locally:<br>
 using the extension:<br>
 <br>
 // for regular posts/videos<br>
-* go to post page instagram<br>
-* click on the extension icon<br>
+* click on a post on ig to open it<br>
+* a confirm dialog should pop up asking if you want to download the files.<br>
 <br>
 // for stories<br>
 * click on selected story to go into story viewer<br>
