@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     else{
-      document.getElementById('results').innerHTML = 'you are not currently on instagram';
+      document.getElementById('results').innerHTML = 'you are not currently on the IG website';
     }
   });
 }, false);

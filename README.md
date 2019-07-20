@@ -9,3 +9,15 @@ After installing the extension, navigate to ig's website and log in. From there 
 * click start download button on top left of page and stories should start downloading as they are played.<br>
 * click stop download button on top left of page to stop downloading.<br>
 <br>
+
+# Installation
+
+## Manual Download
+* clone this repo to a chosen folder<br>
+* open chrome<br>
+* navigate to chrome://extensions<br>
+* click "load unpacked"<br>
+* select the repo!<br>
+
+## Chrome Store
+To add to chrome through chrome store <a href="https://chrome.google.com/webstore/detail/ig-downloader/gelbcoobaindiodaajafdoibjohgnnda">CLICK HERE</a> (free download)
