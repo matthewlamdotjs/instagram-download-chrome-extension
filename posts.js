@@ -61,6 +61,9 @@ function downloadPosts(){
                 videos.forEach(function(video){
                     downloadResource(video, 'video');
                 });
+            } else {
+                videos = [];
+                images = [];
             }
         }
     }
