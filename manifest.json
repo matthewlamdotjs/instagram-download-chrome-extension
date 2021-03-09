@@ -10,7 +10,7 @@
   },
   "permissions": [ "activeTab" ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [],
     "persistent": false
   },
   "content_scripts": [
